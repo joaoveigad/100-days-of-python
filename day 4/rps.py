@@ -39,7 +39,7 @@ wincons = {  # or win conditions, for short.
 computerChoice = random.choice(choices)
 
 if playerChoice < 0 or playerChoice > len(choices) - 1:
-    print('Invalid number! Please type again.')
+    print('Invalid number! Please try again.')
 else:
     computerChoice = random.randint(0, 2)
     print(f'You chose: \n{choices[playerChoice]}')
@@ -50,6 +50,6 @@ else:
 
     elif (playerChoice, computerChoice) in wincons:
         print(wincons[(playerChoice, computerChoice)])
-        
+
     else:
         print('You lose!')
