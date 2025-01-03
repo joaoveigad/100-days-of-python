@@ -35,7 +35,7 @@ while player_lives > 0:
         print(hidden_word)
         print('Good! Time to guess another one.')
         if not '_' in hidden_word:
-            print('You did it! You won!')
+            print(f'You did it! You won! The word is indeed {chosen_word}!')
             break
 
     else:
@@ -44,4 +44,4 @@ while player_lives > 0:
         print(f'You now have {player_lives} lives.')
 
 if player_lives == 0:
-    print('You died!')
+    print(f'You died! Anywho, the word was: {chosen_word}.')

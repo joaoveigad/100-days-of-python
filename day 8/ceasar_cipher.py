@@ -7,16 +7,16 @@ shift = int(input("Type the shift number: \n"))
 
 
 def cipher(original_text, shift_amount):
-    encrypted_text = ''
+    output = ''
     for letter in original_text:
         if letter not in alphabet:
-            encrypted_text += letter
+            output += letter
         else:
             if encode_or_decode == "decode":
                 shift_amount *= -1
             new_index = alphabet.index(letter) + shift_amount
             new_index %= len(alphabet)
-            encrypted_text += alphabet[new_index]
-    print(encrypted_text)
+            output += alphabet[new_index]
+    print(output)
 
 cipher(text, shift)
