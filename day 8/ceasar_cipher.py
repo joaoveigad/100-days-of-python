@@ -19,10 +19,13 @@ def cipher(original_text, shift_amount, encode_or_decode):
 
 
 while True:
-    direction = input("Type 'encode' to encrypt, type 'decode' to decrypt: \n")
-    if direction not in ["encode", "decode"]:
+    direction = input("Type 'encode' to encrypt and 'decode' to decrypt. Type 'leave' to end: \n").lower()
+    if direction == 'leave':
+        break
+    elif direction not in ["encode", "decode"]:
         print("Please type the correct option!")
         continue
+
     text = input("Type your message! \n").lower()
     shift = int(input("Type the shift number: \n"))
     cipher(text, shift, direction)
