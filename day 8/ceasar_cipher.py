@@ -3,9 +3,6 @@ alphabet = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n'
 
 
 def cipher(original_text, shift_amount, encode_or_decode):
-    if direction != "encode" and direction != "decode":
-        print('Please type the correct option')
-        return
     encrypted_text = ''
     if encode_or_decode == "decode":
         shift_amount *= -1
