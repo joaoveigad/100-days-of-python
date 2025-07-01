@@ -13,6 +13,8 @@ def check_followers(a, b, player_choice):
 def game():
     person_a = random.choice(data)
     person_b = random.choice(data)
+    if person_b == person_a:
+        person_b = random.choice(data)
     points = 0
     is_game_over = False
     print('Now we are playing a Higher | Lower game!')
