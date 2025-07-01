@@ -10,7 +10,6 @@ def check_followers(a, b, player_choice):
     else:
         return None
 
-
 def game():
     person_a = random.choice(data)
     person_b = random.choice(data)
@@ -30,6 +29,7 @@ def game():
             time.sleep(2)
             game()
         elif player_choice == 'c':
+            print('Game successfully stopped! Bai bai!')
             break
         check = check_followers(person_a['follower_count'],person_b['follower_count'], player_choice)
         if player_choice != check:
@@ -45,6 +45,7 @@ def game():
                 person_b = random.choice(data)
                 if person_b == person_a:
                     person_b = random.choice(data)
+
     if is_game_over:
         try_again = input('Want to try again? Yes or no? ').lower()
         if try_again == 'yes':
@@ -53,7 +54,6 @@ def game():
             print("Bai bai!")
         else:
             print('It was supposed to be yes or no! You broke the game. You died!')
-
 
 
 
