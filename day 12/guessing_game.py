@@ -3,10 +3,6 @@ import time
 
 random_number = random.choice(range(1, 21))
 
-
-def difficulty_check():
-    
-
 def check_number():
     print('Now, to choose your difficulty!')
     player_lives = 0
